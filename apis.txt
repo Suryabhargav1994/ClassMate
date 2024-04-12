@@ -1,0 +1,137 @@
+
+
+
+signup:   POST
+
+http://127.0.0.1:9000/roommate/signup
+
+Payload:
+{
+    "firstname": "hemasai",
+    "lastname": "nagothi",
+    "email": "hemu.nagothi+3@gmail.com",
+    "password": "123456789",
+    "phone_number": "987595412"
+
+}
+
+response:
+{
+    "status": "200",
+    "message": "Data saved successfully",
+    "data": null
+}
+
+
+
+Signin:		POST
+
+http://127.0.0.1:9000/roommate/signin
+
+payload:
+
+{
+    "email": "hemu.nagothi+3@gmail.com",
+    "password": "123456789"
+}
+
+response:
+
+{
+    "status": "200",
+    "message": "Login succefful",
+    "data": {
+        "user_id": "b828eeff-bbc8-473a-ad73-3ba3092a937b"
+    }
+}
+
+
+University Registration: POST
+
+http://127.0.0.1:9000/roommate/university-registry
+
+
+Payload:
+{
+    "university_name": "cal-tech",
+    "address": "california"
+}
+
+Response:
+{
+    "status": "200",
+    "message": "University data has registered",
+    "data": null
+}
+
+
+List of universities: GET
+
+http://127.0.0.1:9000/roommate/universities-list
+
+Response:
+{
+    "status": "200",
+    "message": "University data has registered",
+    "data": [
+        {
+            "university_id": "622bf121-96c6-48b0-87c8-42a5cd90eced",
+            "university_name": "cal-tech",
+            "university_address": "california"
+        },
+        {
+            "university_id": "7fd27066-987a-47d3-aa30-6ea9b13992ec",
+            "university_name": "UNT",
+            "university_address": "Texas"
+        }
+    ]
+}
+
+
+
+Aminity-registry: 	POST
+
+/roommate/aminity-registry
+
+payload:
+
+{
+    "amenity_name": "BasketBall"
+}
+
+response:
+
+{
+    "status": "200",
+    "message": "Amenity data has registered",
+    "data": null
+}
+
+
+list of amenities:  GET
+
+/roommate/aminity-list
+
+Response:
+{
+    "status": "200",
+    "message": "Aminity data has retrivied",
+    "data": [
+        {
+            "amenity_id": "406aec96-bde4-4a19-bd20-f17d09896dd5",
+            "amenity_name": "swimming pool"
+        },
+        {
+            "amenity_id": "53d1216b-2a51-4510-85ac-6c7c6191857b",
+            "amenity_name": "wifi"
+        },
+        {
+            "amenity_id": "6586c7d7-71af-44db-855c-85eca42e39cb",
+            "amenity_name": "basketball"
+        },
+        {
+            "amenity_id": "a86d0cd1-78d3-475d-9aec-c7bc48f31191",
+            "amenity_name": "tv"
+        }
+    ]
+}
