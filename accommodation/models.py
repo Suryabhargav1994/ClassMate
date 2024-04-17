@@ -40,7 +40,6 @@ class Accomidation(models.Model):
     accomidation_id = models.UUIDField(default = uuid.uuid4(), primary_key = True)
     name = models.CharField(max_length = 255, null = False)
     address = models.CharField(max_length = 255)
-    distance = models.CharField(max_length = 255)
     price = models.IntegerField()
     availability = models.IntegerField()
     date_added = models.DateField(auto_now_add = True)
