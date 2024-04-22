@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import signup, signin, university_register, universities_list, amenity_register, amenities_list
-from . import accommidation_reg, uni_acc_map, list_acc, booking_room
+from . import accommidation_reg, uni_acc_map, list_acc, booking_room, acco_details
 
 urlpatterns = [
         path('signup', signup.SignUp.as_view()),
@@ -13,5 +13,6 @@ urlpatterns = [
         path('accommodation-register', accommidation_reg.AccommidationApi.as_view()),
         path('acc-uni-map', uni_acc_map.AccUnivApi.as_view()),
         path('acc-list', list_acc.ListAccomidation.as_view()),
-        path('booking-room', booking_room.BookAccomidation.as_view())
+        path('booking-room', booking_room.BookAccomidation.as_view()),
+        path('account-details', acco_details.PersonDetails.as_view()),
     ]

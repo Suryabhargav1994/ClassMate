@@ -19,7 +19,7 @@ step2: Install all the pip libraries from the below list
   4. pip install django-cors-headers
 
 step3: clone the code from this link 
-    git clone --branch finalsubmission https://github.com/Suryabhargav1994/ClassMate-BACKEND.git
+    git clone --branch finalcode https://github.com/Hemasai8333/learning_proj.git
 
 step4: download the mysql database https://dev.mysql.com/downloads/installer/
 
