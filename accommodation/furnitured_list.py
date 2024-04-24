@@ -1,12 +1,12 @@
 from rest_framework.views import APIView
-from .models import Amenities
+from .models import furnitured
 import uuid
 from django.http import JsonResponse
 
-class Aminitylist(APIView):
+class furnituredlist(APIView):
     def get(self, request):
         try:
-            amenities = Amenities.objects.all()
+            amenities = furnitured.objects.all()
             list_of_amenities = []
             for i in amenities:
                 list_of_amenities.append({"amenity_id": i.amenity_id,
