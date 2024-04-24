@@ -35,6 +35,11 @@ class Amenities(models.Model):
     date_added = models.DateField(auto_now_add = True)
     last_modified = models.DateField(auto_now = True)
 
+class furnitured(models.Model):
+    furnitured_id = models.UUIDField(default = uuid.uuid4(), primary_key = True)
+    name = models.CharField(max_length=255)
+    date_added = models.DateField(auto_now_add = True)
+    last_modified = models.DateField(auto_now = True)
 class Accomidation(models.Model):
 
     accomidation_id = models.UUIDField(default = uuid.uuid4(), primary_key = True)
@@ -45,6 +50,7 @@ class Accomidation(models.Model):
     date_added = models.DateField(auto_now_add = True)
     last_modified = models.DateField(auto_now = True)
     person_id = models.ForeignKey(Person, db_column = 'person_id', on_delete=models.CASCADE)
+    furnituredname = models.CharField(max_length = 255)
     
 
 class UniversitiesDistances(models.Model):

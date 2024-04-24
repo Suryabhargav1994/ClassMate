@@ -21,7 +21,8 @@ class AccommidationApi(APIView):
                                             address = acc_address,
                                             price = acc_price,
                                             availability = availability,
-                                            person_id = persons_id
+                                            person_id = persons_id,
+                                            furnituredname = data.get('furnituredname')
                                             )
                 acc_data.save()
 

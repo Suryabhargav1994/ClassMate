@@ -1,36 +1,36 @@
 from rest_framework.views import APIView
-from .models import Amenities
+from .models import furnitured
 import uuid
 from django.http import JsonResponse
 
-class AmenityApi(APIView):
+class FurnitureApi(APIView):
     def post(self, request):
         try:
             data = request.data
-            amenity_name = data.get('amenity_name')
-            amenity_name = amenity_name.lower()
-            print(amenity_name)
-            exis_amenity = Amenities.objects.filter(name = amenity_name).count()
+            funrniture_name = data.get('name')
+            funrniture_name = funrniture_name.lower()
+            print(funrniture_name)
+            exis_amenity = furnitured.objects.filter(name = funrniture_name).count()
             if exis_amenity == 0:
-                amenity_data = Amenities(amenity_id= uuid.uuid4(), name = amenity_name)
-                amenity_data.save()
+                funrniture_data = furnitured(furnitured_id= uuid.uuid4(), name = funrniture_name)
+                funrniture_data.save()
 
                 return JsonResponse(
                     {
                         "status": "200",
-                        "message": "Amenity data has registered", 
+                        "message": "funrniture data has registered", 
                         "data": None
                     })
             else:
                 return JsonResponse(
                     {
                         "status": "401",
-                        "message": "Amenity already exists", 
+                        "message": "funrniture already exists", 
                         "data": None
                     })
         except:
             return JsonResponse({
                     "status": "401",
-                    "message": "Error with Amenity", 
+                    "message": "Error with funrniture", 
                     "data": None
             })

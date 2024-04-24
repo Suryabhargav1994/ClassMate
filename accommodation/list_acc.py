@@ -22,7 +22,8 @@ class ListAccomidation(APIView):
                                   "availability": acc.availability,
                                   "username": acc.person_id.firstname,
                                   "distance": str(total_distace.distance)+" kms",
-                                  "accomidation_id": acc.accomidation_id
+                                  "accomidation_id": acc.accomidation_id,
+                                  "furnished": acc.furnituredname
                                   })
             
             return JsonResponse(
